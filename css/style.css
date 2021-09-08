@@ -1,0 +1,223 @@
+:root {
+    font-size: 17px;
+}
+* {
+    font-family: 'Urbanist', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#toggleBtn{
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+#toggleBtn:hover {
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 50%;
+}
+.fa-globe {
+    color: #1EAE98;
+}
+.connect {
+    color: green;
+    text-transform: uppercase;
+}
+nav, .jumbotron {
+    padding: 0px 50px;
+    background-color: #FDF6F0;
+    display: flex;
+    flex-basis: 100;
+    justify-content: space-between;
+    align-items: center;
+    color: #0F044C;
+}
+.logo {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #0F044C;
+}
+nav {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+}
+.jumbotron {
+    min-height: 80vh;
+}
+.jumbotron__image {
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron__image > img {
+    width: 80%;
+    box-shadow: 2px 2px 4px 4px #F5C6AA;
+    transition-property: transform;
+}
+.jumbotron__image > img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.jumbotron__text {
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.jumbotron__text > h2 {
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.jumbotron__text> p {
+    letter-spacing: 1.5px;
+}
+.jumbotron__text > a {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 600;
+    background-color: #141E61;
+    color: #FDF6F0
+
+}
+.main {
+    min-height: 100vh;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70;
+    color: #0F044C;
+}
+.main > h2 {
+    margin-bottom: 50px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+form > * {
+    margin-bottom: 30px;
+}
+form > label {
+    font-weight: 600;
+}
+form > button {
+    width: 200px;
+    height: 40px;
+    background-color: #141E61;
+    border: none;
+    outline: none;
+    color: #FDF6F0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+form > button, .jumbotron__text > a {
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+form > button:hover, .jumbotron__text > a:hover {
+    background: #2f386d;
+
+}
+
+form > input {
+    width: 70%;
+    height: 40px;
+    padding: 20px;
+    border: 1px solid #F5C6AA;
+    outline: none;
+    background-color: transparent;
+}
+.result {
+    display: none;
+}
+.result > * {
+    margin-bottom: 5px;
+}
+
+.result > img {
+    height: 250px;
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+footer {
+    min-height: 10vh;
+  background-color: #FAF1E6;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+@media  screen and (max-width : 900px) {
+   .jumbotron {
+       flex-direction: column-reverse;
+   }
+   nav {
+       padding: 0px 20px;
+   }
+   .jumbotron__text {
+       align-items: center;
+       text-align: center;
+       padding-bottom: 50px;
+   }
+   .jumbotron__image {
+       margin: 30px 0px;
+   }
+   .jumbotron__text > h2  {
+       font-size: 1.2rem;
+   }
+   .jumbotron__text > p {
+    font-size: 16px;
+    letter-spacing: 1px;
+   }
+   .jumbotron__text > a {
+       display: block;
+       text-align: center;
+   }
+   form > input {
+       width: 80%;
+   }
+}
+@media  screen and (max-width : 768px) {
+    .main {
+        flex-basis: 100;
+    }
+    form {
+        width: 100%;
+    }
+    form > input {
+        width: 100%;
+    }
+    .fa-globe {
+        display: none;
+    }
+    footer > h2 {
+        font-size: 20px;
+    }
+    footer > p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width : 400px) {
+    footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+    footer > * {
+        margin-bottom: 20px;
+    }
+}

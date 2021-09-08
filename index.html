@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="shortcut icon" href="./images/logo.png">
+    <title>Gitty | Find & Connect with other developers</title>
+</head>
+<body class="body">
+    <nav class="nav">
+        <a href="#top"  class="logo">Gitty</a>
+        <i class="fas fa-moon" id="toggleBtn"></i>
+    </nav>
+    <main id="top">
+        <div class="jumbotron">
+            <section class=" jumbotron__text">
+                <h2><span class="connect">CONNECT</span> with other developers <i class="fas fa-globe"></i></h2>
+                <p>Increase your network by <span class="connect">locating tech professionals</span> around the world to build world-class products and develop long lasting relationships.</p>
+                <a href="#find">CONNECT</a>
+            </section>
+            <div class=" jumbotron__image">
+                <img src="./images/techy.jpg" alt="Gitty Tech professionals">
+            </div>
+        </div>
+        
+        <div class="main">
+            <h2 id="find">FIND FELLOW CODERS</h2>
+            <form>
+                <label for="username">Enter a Github Username</label>
+                <input type="text" name="" placeholder="Username" required id="username"/>
+                <button id="formBtn"> FIND </button>
+            </form>
+            <div class="result">
+                <img src="" alt="" title="" id="result__image"/>
+                <h3 id="result__name"></h3>
+                <p id="result__title"></p>
+                <p id="result__location"></p>
+            </div>
+
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="#top" class="logo">Gitty</a>
+        <p>Powered by GitHub</p>
+        <p>Made in 2021</p>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
