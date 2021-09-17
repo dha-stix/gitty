@@ -14,6 +14,30 @@ let resultName = document.querySelector("#result__name")
 let resultLocation = document.querySelector("#result__location")
 let username = document.querySelector("#username")
 
+//INTERSECTION OBSERVER FUNCTIONS
+const jumbotronOptions = {
+    rootMargin : "-100px 0px 0px 0px"
+}
+const jumbotronObserver = new IntersectionObserver((entries, jumbotronObserver)=>{
+entries.forEach(entry => {
+     if(toggleBtn.classList.contains("fa-moon")){
+         if(!entry.isIntersecting) {
+        nav.style.backgroundColor = "#fff"
+        }else {
+            nav.style.backgroundColor = "#FDF6F0"
+        }
+    } else {
+        if(!entry.isIntersecting) {
+        nav.style.backgroundColor = "#726A95"
+        }else {
+            nav.style.backgroundColor = "#261C2C"
+        }
+    }
+   
+})
+}, jumbotronOptions)
+
+jumbotronObserver.observe(jumbotron)
 
 //FUNCTIONS
 const toggleFunction = () => {
@@ -25,7 +49,7 @@ const toggleFunction = () => {
         toggleBtn.style.padding = "5px"
         toggleBtn.style.borderRadius= "50%"
 
-        nav.style.backgroundColor = "#726A95"
+        nav.style.backgroundColor = "#261C2C"
         nav.children[0].style.color = "#f2f0f1"
         jumbotron.style.backgroundColor = "#261C2C"
         jumbotron.style.color = "#f2f0f1"
